@@ -1,0 +1,43 @@
+" Easier access to leader with space"
+let mapleader=" "
+
+" Some standard vim plugins that are nice to have as a base
+set surround
+set scrolloff=5
+set ideajoin
+set NERDTree
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set incsearch
+
+" Really good for jumping between words in Editor window
+set easymotion
+map <Leader> <Plug>(easymotion-prefix)
+
+" Highlight yanked text for 80ms, just seems nice on the eyes
+set highlightedyank
+let g:highlightedyank_highlight_duration = "80"
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" Use gs to go the previous if statement, for jumping between conditionals in Python
+nnoremap gs ?\sif\s<CR>nw
+
+" Use gr to go the next return of function definition
+nnoremap gr /return <CR>
+
+" Use <Leader>p to replace the highlighted word into the blackhole register, and paste from the latest yank.
+" Courtesy of the Primeagen, CEO of Billion Dollar Startup, Inc.
+xnoremap <Leader>p "_dP
+
+" Use gk and gj to move up and down by methods
+map gk <Action>(MethodUp)
+map gj <Action>(MethodDown)
+
+" Use ge and gE to move up and down by errors, super useful for linting
+map ge <Action>(GotoNextError)
+map gE <Action>(GotoPreviousError)
