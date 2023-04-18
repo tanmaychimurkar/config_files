@@ -121,6 +121,7 @@ fi
 
 # putting common defaults
 export OS_SYSTEM_DOCKER_PATH='/usr/bin/docker'
+export TRASH='$HOME/.local/share/Trash'
 
 # setting up pyenv for with virtualenv support
 export PYENV_ROOT="$HOME/.pyenv"
