@@ -15,6 +15,9 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -116,27 +119,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export CAESAR_BASE_PATH='/home/tanmay/privatealpha/software/caesar'
+# putting common defaults
 export OS_SYSTEM_DOCKER_PATH='/usr/bin/docker'
 
+# setting up pyenv for with virtualenv support
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# best bash terminal ever!!! 
 eval "$(starship init bash)"
 
+# Super handy to have autocompletion, although k9s takes all of it away
 source <(kubectl completion bash)
 
-alias gitu='git status -uno'
-alias dockerpa='docker ps -a'
-alias dockerup='docker-compose up'
-alias dockerdw='docker-compose down'
-alias dockerpr='docker system prune -f'
-alias k9s='/home/tanmay/.local/bin/k9s'
-
+# save one command everyday
 pyenv activate caesar
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+# Rust FTW!!!!!
 . "$HOME/.cargo/env"
