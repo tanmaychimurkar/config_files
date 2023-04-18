@@ -1,0 +1,17 @@
+org.rust.lang
+com.github.b3er.idea.plugins.arc.browser
+com.intellij.ideolog
+com.markskelton.one-dark-theme
+dev.meanmail.plugin.nginx-intellij-plugin
+AceJump
+IdeaVIM
+com.github.copilot
+org.jetbrains.IdeaVim-EasyMotion
+com.intellij.kubernetes
+com.intellij.nativeDebug
+net.seesharpsoft.intellij.plugins.csv
+izhangzhihao.rainbow.brackets
+ru.meanmail.plugin.requirements
+com.chrisrm.idea.MaterialThemeUI
+com.mallowigi
+mobi.hsz.idea.gitignore
