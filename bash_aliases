@@ -64,3 +64,6 @@ alias tcn='mv --force -t ~/.local/share/Trash '
 alias gh='history|grep'
 
 # command from history can be rerun using `!command number` in bash
+
+# command to list all items by time as I constantly use this command
+alias lstime='ls -halt'
