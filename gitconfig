@@ -1,0 +1,8 @@
+[alias]
+    su = status -uno
+    st = status
+    co = checkout
+    fo = fetch
+
+[help]
+    autocorrect = 1
