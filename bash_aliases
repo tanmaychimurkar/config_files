@@ -62,3 +62,5 @@ alias tcn='mv --force -t ~/.local/share/Trash '
 
 # grep from history, needs keyword to search for in bash history
 alias gh='history|grep'
+
+# command from history can be rerun using `!command number` in bash
