@@ -6,6 +6,7 @@ echo "Configuration files will be copied now to the $HOME directory of this mach
 
 # Path to the dotfiles repo
 DOTFILES_REPO="$HOME/dotfiles"
+STARSHIP_CONFIG_FILE="starship.toml"
 
 echo "Dotfiles directory is $DOTFILES_REPO"
 
@@ -19,8 +20,11 @@ echo "List of dotfiles that will be copied are $DOTFILES"
 
 # Copy dotfiles to the home directory
 for file in "${DOTFILES[@]}"; do
-    cp -r "$DOTFILES_REPO/$file" "$HOME_DIR"
-    mv "$HOME/$file" "$HOME/.$file"
+    if [[ $(< $file) != "$STARSHIP_CONFIG_FILE" ]]; then
+        cp -r "$DOTFILES_REPO/$file" "$HOME_DIR"
+        mv "$HOME/$file" "$HOME/.$file"
+    else:
+        cp -r "$DOTFILES_REPO/$file" "$HOME_DIR/.config"
 done
 
 echo "The shell will be reloaded now"
