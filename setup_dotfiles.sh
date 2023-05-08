@@ -17,41 +17,15 @@ DOTFILES=("bashrc" "bash_aliases" "ideavimrc" "gitconfig" "tmux.conf")
 echo "List of dotfiles that will be copied are $DOTFILES"
 
 for file in "${DOTFILES[@]}"; do
-if [[ ! " ${EXCLUDED_FILES[@]} " =~ " ${file} " ]]; then
-cp -r "$DOTFILES_REPO/$file" "$HOME_DIR"
-mv "$HOME_DIR/$file" "$HOME_DIR/.$file"
-else
-cp -r "$DOTFILES_REPO/$file" "$HOME_DIR/.config"
-fi
+    if [[ ! " ${EXCLUDED_FILES[@]} " =~ " ${file} " ]]; then
+        cp -r "$DOTFILES_REPO/$file" "$HOME_DIR"
+        mv "$HOME_DIR/$file" "$HOME_DIR/.$file"
+    else
+        cp -r "$DOTFILES_REPO/$file" "$HOME_DIR/.config"
+    fi
 done
 
-echo "The shell will be reloaded now"
+echo "All dotfiles are now copied (except JetBrains configurations). You are good to go"
+echo "The shell will be reloaded automatically now"
 exec "$SHELL"
 
-
-#DOTFILES_REPO="$HOME/dotfiles"
-#EXCLUDED_FILES=("starship.toml" "keybindings.ron")
-#
-#echo "Dotfiles directory is $DOTFILES_REPO"
-#
-## Path to the home directory
-#HOME_DIR="$HOME"
-#
-## List of dotfiles to copy
-#DOTFILES=("bashrc" "bash_aliases" "ideavimrc" "gitconfig" "tmux.conf" )
-#
-#echo "List of dotfiles that will be copied are $DOTFILES"
-#
-## Copy dotfiles to the home directory
-#for file in "${DOTFILES[@]}"; do
-#    if [[ ! "$EXCLUDED_FILES[@]" =~ "${file}" ]]; then
-#        cp -r "$DOTFILES_REPO/$file" "$HOME_DIR"
-#        mv "$HOME/$file" "$HOME/.$file"
-#    else:
-#        cp -r "$DOTFILES_REPO/$file" "$HOME_DIR/.config"
-#done
-#
-#echo "The shell will be reloaded now"
-#exec $SHELL
-
-echo "All dotfiles are now copied (except JetBrains configurations). You are good to go"
