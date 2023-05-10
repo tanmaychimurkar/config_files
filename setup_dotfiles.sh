@@ -25,7 +25,7 @@ for file in "${DOTFILES[@]}"; do
     fi
 done
 
-echo "All dotfiles are now copied (except JetBrains configurations). You are good to go!!"
+echo "All dotfiles are now copied (except JetBrains configurations, which need to be copied manually). You are good to go!!"
 echo "The shell will be reloaded automatically now"
 
 exec "$SHELL"
