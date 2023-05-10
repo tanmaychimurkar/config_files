@@ -136,7 +136,7 @@ eval "$(starship init bash)"
 source <(kubectl completion bash)
 
 # save one command everyday
-pyenv activate caesar
+pyenv activate local_env
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
