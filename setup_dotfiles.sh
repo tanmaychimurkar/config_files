@@ -26,6 +26,13 @@ for file in "${DOTFILES[@]}"; do
 done
 
 echo "All dotfiles are now copied (except JetBrains configurations, which need to be copied manually). You are good to go!!"
+
+echo "Installing the xset clipboard for tmux-yank"
+
+source ./install_dependencies.sh
+
+sudo apt-get install xset -y
+
 echo "The shell will be reloaded automatically now"
 
 exec "$SHELL"
