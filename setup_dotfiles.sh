@@ -60,7 +60,7 @@ else
   exit 1
 fi
 
-echo "The shell will be reloaded automatically now"
+echo "The shell will be reloaded automatically now\n"
 
 exec "$SHELL"
 
