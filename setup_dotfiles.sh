@@ -24,19 +24,19 @@ if [[ "$PASSED_ARG" == "--help" || "$PASSED_ARG" == "-h" ]]; then
 fi
 
 # Script to copy dotfiles from the repo to the home directory
-echo "Configuration files will be copied now to the $HOME directory of this machine"
+echo "Configuration files will be copied now to the $HOME directory of this machine\n"
 
 # Path to the dotfiles repo
 DOTFILES_REPO="$HOME/dotfiles"
 EXCLUDED_FILES=("starship.toml" "keybindings.ron")
 
-echo "Dotfiles directory is $DOTFILES_REPO"
+echo "Dotfiles directory is $DOTFILES_REPO \n"
 
 HOME_DIR="$HOME"
 
 DOTFILES=("bashrc" "bash_aliases" "ideavimrc" "gitconfig" "tmux.conf")
 
-echo "List of dotfiles that will be copied are $DOTFILES"
+echo "List of dotfiles that will be copied are $DOTFILES \n"
 
 for file in "${DOTFILES[@]}"; do
     if [[ ! " ${EXCLUDED_FILES[@]} " =~ " ${file} " ]]; then
@@ -47,15 +47,15 @@ for file in "${DOTFILES[@]}"; do
     fi
 done
 
-echo "All dotfiles are now copied (except JetBrains configurations, which need to be copied manually). You are good to go!!"
+echo "All dotfiles are now copied (except JetBrains configurations, which need to be copied manually). You are good to go!!\n"
 
 if [[ "$PASSED_ARG" == "--install_deps" ]]; then
-  echo "Installation of dependencies"
+  echo "Installation of dependencies\n"
   source ./dependent_software.sh
 elif [[ "$PASSED_ARG" == "--skip_deps" ]]; then
-  echo "Skipping the installation of dependencies"
+  echo "Skipping the installation of dependencies\n"
 else
-  echo "Choose a flag to install either install dependencies, use -h for help"
+  echo "Choose a flag to install either install dependencies, use -h for help\n"
   echo $'\n'
   exit 1
 fi
