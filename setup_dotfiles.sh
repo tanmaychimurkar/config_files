@@ -11,7 +11,7 @@ function usage {
 }
 
 if [ "$#" -ne 1 ]; then
-  echo "Choose a flag to install dependencies, y/n"
+  echo "Choose a flag to install dependencies, --install_deps or --skip_deps"
   echo $'\n'
   exit 1
 fi
