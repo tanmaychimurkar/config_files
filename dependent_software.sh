@@ -42,3 +42,6 @@ sudo mv gitui /usr/local/bin
 
 echo "Installing k9s for Kubernetes cluster management"
 curl -sS https://webi.sh/k9s | sh
+
+echo "Installing hugo for personal blog developement"
+sudo snap install hugo
