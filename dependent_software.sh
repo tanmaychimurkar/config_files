@@ -45,3 +45,6 @@ curl -sS https://webi.sh/k9s | sh
 
 echo "Installing hugo for personal blog developement"
 sudo snap install hugo
+
+echo "Installing tpm for tmux"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
