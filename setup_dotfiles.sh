@@ -61,6 +61,5 @@ else
 fi
 
 echo "The shell will be reloaded automatically now"
-
 exec "$SHELL"
 
