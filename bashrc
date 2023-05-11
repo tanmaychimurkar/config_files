@@ -123,6 +123,10 @@ fi
 export OS_SYSTEM_DOCKER_PATH='/usr/bin/docker'
 export TRASH='$HOME/.local/share/Trash'
 
+# restarting ssh-agent since this has been an issue on my machine
+eval `ssh-agent -s`
+ssh-add
+
 # setting up pyenv for with virtualenv support
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
