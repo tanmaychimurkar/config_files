@@ -11,7 +11,7 @@ function usage {
 }
 
 if [ "$#" -ne 1 ]; then
-  echo "Choose a flag to install dependencies, y/n"
+  echo "Choose a flag to install dependencies, --install_deps or --skip_deps"
   echo $'\n'
   exit 1
 fi
@@ -24,7 +24,7 @@ if [[ "$PASSED_ARG" == "--help" || "$PASSED_ARG" == "-h" ]]; then
 fi
 
 # Script to copy dotfiles from the repo to the home directory
-echo "Configuration files will be copied now to the $HOME directory of this machine"
+echo "Configuration files will be copied now to the $HOME directory of this machine\n"
 
 # Path to the dotfiles repo
 DOTFILES_REPO="$HOME/dotfiles"
@@ -61,6 +61,5 @@ else
 fi
 
 echo "The shell will be reloaded automatically now"
-
 exec "$SHELL"
 

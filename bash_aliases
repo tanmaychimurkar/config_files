@@ -45,9 +45,6 @@ alias dkrmi='docker rmi'
 
 ################# Miscellaneous #################
 
-# Just an alias to link k9s tool to be able to run from anywhere in bash 
-alias k9s='/home/tanmay/.local/bin/k9s'
-
 # reload shell after changes in bashrc or any related file 
 alias reload='exec $SHELL'
 
