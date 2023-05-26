@@ -20,6 +20,7 @@ map <Leader> <Plug>(easymotion-prefix)
 " Highlight yanked text for 80ms, just seems nice on the eyes
 set highlightedyank
 let g:highlightedyank_highlight_duration = "80"
+let g:highlightedyank_highlight_color = "rgba(255, 152, 0, 200)"
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
