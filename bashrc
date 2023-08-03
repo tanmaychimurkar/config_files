@@ -135,9 +135,6 @@ eval "$(starship init bash)"
 # Super handy to have autocompletion, although k9s takes all of it away
 source <(kubectl completion bash)
 
-# save one command everyday
-pyenv activate caesar
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
