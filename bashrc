@@ -135,6 +135,9 @@ eval "$(starship init bash)"
 # Super handy to have autocompletion, although k9s takes all of it away
 source <(kubectl completion bash)
 
+# Add pyenv activate for your environment, with the name
+# pyenv activate my_dummy_env
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
