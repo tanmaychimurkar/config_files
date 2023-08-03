@@ -122,10 +122,8 @@ fi
 # putting common defaults
 export OS_SYSTEM_DOCKER_PATH='/usr/bin/docker'
 export TRASH='$HOME/.local/share/Trash'
-
-# restarting ssh-agent since this has been an issue on my machine
-eval `ssh-agent -s`
-ssh-add
+export CAESAR_PATH='/home/tanmay/privatealpha/software/caesar'
+export DATALAKE_PATH='/home/tanmay/privatealpha/software/datalake'
 
 # setting up pyenv for with virtualenv support
 export PYENV_ROOT="$HOME/.pyenv"
@@ -140,10 +138,14 @@ eval "$(starship init bash)"
 source <(kubectl completion bash)
 
 # save one command everyday
-pyenv activate local_env
+pyenv activate caesar
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # Rust FTW!!!!!
 . "$HOME/.cargo/env"
+
+# Evaluating and adding ssh-key to fix gitui issueA
+eval `ssh-agent`
+ssh-add
