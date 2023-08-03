@@ -122,8 +122,6 @@ fi
 # putting common defaults
 export OS_SYSTEM_DOCKER_PATH='/usr/bin/docker'
 export TRASH='$HOME/.local/share/Trash'
-export CAESAR_PATH='/home/tanmay/privatealpha/software/caesar'
-export DATALAKE_PATH='/home/tanmay/privatealpha/software/datalake'
 
 # setting up pyenv for with virtualenv support
 export PYENV_ROOT="$HOME/.pyenv"
