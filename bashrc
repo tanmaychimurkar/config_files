@@ -146,8 +146,10 @@ source <(kubectl completion bash)
 
 # Evaluating and adding ssh-key to fix gitui issueA
 eval `ssh-agent`
-ssh-add
+ssh-agent -s
+ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/personal_git_key
 
 # Deleting old journal archives from Linux based machines, setting up rolling journal to only retain last 10 days of data
-sudo journalctl --vaccum-size=100M
-sudo journalctl --vaccum-time=10d
+sudo journalctl --vacuum-size=100M
+sudo journalctl --vacuum-time=10d
