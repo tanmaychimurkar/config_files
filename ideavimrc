@@ -20,7 +20,7 @@ map <Leader> <Plug>(easymotion-prefix)
 " Highlight yanked text for 80ms, just seems nice on the eyes
 set highlightedyank
 let g:highlightedyank_highlight_duration = "80"
-let g:highlightedyank_highlight_color = "rgba(255, 152, 0, 200)"
+let g:highlightedyank_highlight_color = "rgba(255, 153, 102, 200)"
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -42,3 +42,6 @@ map gj <Action>(MethodDown)
 " Use ge and gE to move up and down by errors, super useful for linting
 map ge <Action>(GotoNextError)
 map gE <Action>(GotoPreviousError)
+
+" Some commands that I somehow found and still find useful
+" go visual block mode, select numbers, hit `g + ctrl + a`, boom!
